@@ -1,18 +1,126 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
+      font-family: Arial, sans-serif;
+      padding: 0px;
+      margin: 0px;
+      text-align: center;
+    }
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    #filename-input {
+      margin-bottom: 5px;
+      padding: 5px;
+      font-size: 1em;
+    }
+
+    #countdown-container {
+      margin-bottom: 0px;
+    }
+
+    #grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+      grid-template-rows: auto auto;
+      gap: 120px;
+      justify-items: center;
+      align-items: center;
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 0px auto;
+    }
+
+    .timer-block {
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+      width: auto;         
+      max-width: 100%;     
+      box-sizing: border-box;
+    }
+
+    .timer-label {
+      font-weight: bold;
+      font-size: 1.2em;
+      display: inline-block;
+      min-width: 180px;
+      white-space: nowrap;
+    }
+
+    .time-display {
+      font-size: 1.5em;
+      display: block;
+      margin: 10px 0;
+    }
+
+    button {
+      margin: 0 3px;
+      padding: 5px 10px;
+    }
+
+    .disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    #center-image {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      opacity: 1;
+    }
+
+    #start-btn {
+      background-color: #0096FF;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 14px;
+      margin-left: 10px;
+    }
+
+    #save-btn {
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 14px;
+      margin-left: 10px;
+    }
+
+    #export-rows-btn {
+      background-color: #FFA500;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 14px;
+      margin-left: 10px;
+    }
+
+    #pause-resume-btn {
+      background-color: #808080;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 14px;
+      margin-left: 10px;
+    }
+
+    #reset-btn {
+      background-color: #FF0000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      padding: 6px 14px;
+      margin-left: 10px;
+    }
