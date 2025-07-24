@@ -3,15 +3,57 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>Object Timer</title>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Hello, World!</h1>
-        <button id="changeColorBtn">Change Color</button>
+    <h1>OLD Timer - Object Scoring </h1>
+    <h3 style="margin-top: 5px; font-weight: normal; color: #555;">
+      Copyright &copy; 2025 Olivia Drayson
+    </h3>
+
+    <div id="top-input-row" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+      <input type="text" id="filename-input" placeholder="Project Name (optional)" style="padding: 5px; width: 180px;">
+      <select id="experiment-type" style="padding: 5px;">
+        <option value="">Select Experiment</option>
+        <option value="NOR_Train">NOR Novel Object Recognition (Training)</option>
+        <option value="NOR_Test">NOR Novel Object Recognition (Testing)</option>
+        <option value="OLM_Train">OLM Object Location Memory (Training)</option>
+        <option value="OLM_Test">OLM Object Location Memory (Testing)</option>
+        <option value="OUL_Test">OUL Object in Updated Location (Testing)</option>
+        <option value="OiP_Train">OiP Objects in Place (Training)</option>
+        <option value="OiP_Test">OiP Objects in Place (Testing)</option>
+        <option value="TO_Train_1">TO Temporal Order (Training Phase 1)</option>
+        <option value="TO_Train_2">TO Temporal Order (Training Phase 2)</option>
+        <option value="TO_Test">TO Temporal Order (Testing)</option>
+      </select>
     </div>
 
+    <div id="round-row" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px;">
+      <label for="round-input">Round:</label>
+      <input type="text" id="round-input" placeholder="e.g. 1" style="width: 50px; padding: 5px;">
+      <label for="arena-input">Arena:</label>
+      <input type="text" id="arena-input" placeholder="e.g. 1" style="width: 50px; padding: 5px;">
+    </div>
+
+    <div id="countdown-container">
+      <label for="countdown-input">Countdown (mm:ss): </label>
+      <input type="text" id="countdown-input" value="05:00" style="width: 70px; padding: 5px;">
+      <button id="start-btn" onclick="startCountdown()">Start Countdown</button>
+      <button id="pause-resume-btn" onclick="pauseOrResumeCountdown()" disabled>Pause</button>
+      <span id="countdown-display" style="margin-left: 20px; font-size: 1.2em;"></span>
+      <button id="reset-btn" onclick="resetAllTimers()" style="margin-left: 10px; padding: 6px 14px;">Reset All</button>
+    </div>
+
+    <div id="grid-container">
+      <img src="mouse_image.png" id="center-image" alt="Center Image">
+    </div>
+
+    <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center;">
+      <button id="save-btn" onclick="exportToExcel()">Save to Excel</button>
+      <button id="export-rows-btn" onclick="exportRowData()">Export Row Data</button>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
+
